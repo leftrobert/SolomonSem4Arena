@@ -29,8 +29,8 @@ a {text-decoration: none;}
 .button-solid {background: #000; padding: 0 15px; color: #eee; border-bottom: 1px solid #BB251B;}
 .button-transparent {background: none; padding: 0; color: #eee; border-color: rgba(0,0,0,0);}
 
-.icon-dark-small {background: url(../img/icons/icons-dark-small.png); width: 22px; height: 22px;}
-.icon-dark {background: url(../img/icons/icons-dark.png); width: 34px; height: 34px;}
+.icon-dark-small {background: url(../img/icons/Icons-dark-small.png); width: 22px; height: 22px;}
+.icon-dark {background: url(../img/icons/Icons-dark.png); width: 34px; height: 34px;}
 .icon-search-small {background-position: 88px 154px;}
 .icon-menu-middle {background-position: 34px 136px;}
 
