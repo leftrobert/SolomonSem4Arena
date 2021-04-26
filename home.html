@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Solomon</title>
-    <link rel="stylesheet" href="css/solomon.css">
     <link rel="icon" href="img/bg/favicon.png" type="image/favicon">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/solomon.css">
     <script src="js/solomon.js"></script>
     <script src="js/parallax.min.js"></script>
 </head>
@@ -32,28 +33,28 @@
                         <th>Theo thể loại</th>
                     </tr>
                     <tr>
-                        <td><a href="">Truyện tranh</a></td>
-                        <td><a href="">Châu Á</a></td>
-                        <td><a href="">Cổ đại</a></td>
-                        <td><a href="">Truyền thuyết đô thị</a></td>
+                        <td><a href="comics.html">Truyện tranh</a></td>
+                        <td><a href="list.html?tag=chaua">Châu Á</a></td>
+                        <td><a href="list.html?tag=codai">Cổ đại</a></td>
+                        <td><a href="list.html?tag=ttdothi">Truyền thuyết đô thị</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">Blog</a></td>
-                        <td><a href="">Châu Âu</a></td>
-                        <td><a href="">Trung Cổ</a></td>
-                        <td><a href="">Dân gian / Điển tích</a></td>
+                        <td><a href="blogs.html">Blog</a></td>
+                        <td><a href="list.html?tag=chauau">Châu Âu</a></td>
+                        <td><a href="list.html?tag=trungco">Trung Cổ</a></td>
+                        <td><a href="list.html?tag=dangian">Dân gian / Điển tích</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">Phim</a></td>
-                        <td><a href="">Châu Mĩ</a></td>
-                        <td><a href="">Trung Đại</a></td>
-                        <td><a href="">Creepypasta</a></td>
+                        <td><a href="movies.html">Phim</a></td>
+                        <td><a href="list.html?tag=chaumi">Châu Mĩ</a></td>
+                        <td><a href="list.html?tag=trungdai">Trung Đại</a></td>
+                        <td><a href="list.html?tag=creepypasta">Creepypasta</a></td>
                     </tr>
                     <tr>
-                        <td><a href="">Về chúng tôi</a></td>
-                        <td><a href="">Vùng khác</a></td>
-                        <td><a href="">Hiện Đại</a></td>
-                        <td><a href="">Witchcraft</a></td>
+                        <td><a href="about.html">Về chúng tôi</a></td>
+                        <td><a href="list.html?tag=vungkhac">Vùng khác</a></td>
+                        <td><a href="list.html?tag=hiendai">Hiện Đại</a></td>
+                        <td><a href="list.html?tag=hiendai">Witchcraft</a></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -89,67 +90,36 @@
         </ul>
     </div>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="container">
+        <div class="section">
+            <div class="section-top">
+                <span class="section-title">Top comics tuần qua</span>
+                <a href="comics.html" class="button button-solid">Tất cả comics</a>
+            </div>
+            <div class="gallery">
+                <div class="gallery-container">
+                    <img src="img/bg/carousel/movie-carousel-1.jpg" alt="Phim 1" class="gallery-item gallery-item-1" data-index="1">
+                    <img src="img/bg/carousel/movie-carousel-2.jpg" alt="Phim 2" class="gallery-item gallery-item-2" data-index="2">
+                    <img src="img/bg/carousel/movie-carousel-3.jpg" alt="Phim 3" class="gallery-item gallery-item-3" data-index="3">
+                    <img src="img/bg/carousel/movie-carousel-4.jpg" alt="Phim 4" class="gallery-item gallery-item-4" data-index="4">
+                    <img src="img/bg/carousel/movie-carousel-5.jpg" alt="Phim 5" class="gallery-item gallery-item-5" data-index="5">
+                </div>
+                <div class="gallery-controls"></div>
+                <div class="carousel-card-title">
+                    <span class="card-title card-1">Núi lửa</span>
+                    <span class="card-title card-2">Núi</span>
+                    <span class="card-title card-3">Biển</span>
+                    <span class="card-title card-4">Phố</span>
+                    <span class="card-title card-5">Đêm</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
+        // Hình nền chuyển động
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);
     </script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
