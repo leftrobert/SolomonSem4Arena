@@ -20,6 +20,13 @@ a {text-decoration: none;}
 .search-box {display: inline-block; padding: 0 10px; border-bottom: 1px solid #fff;}
 .dropdown-wide {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 .dropdown-wide:hover #menu-wide {visibility: visible; opacity: 1; padding-top: 110px; top: -34px; transition: .5s;}
+.skeleton {line-height: 50px; padding-left: 18px; background-size: 8px 50px; background-repeat: no-repeat;}
+.skeleton a {color: #fff;}
+.skeleton-top {background-image: url(../img/bg/skeletonmenu-top.svg);}
+.skeleton-mid {background-image: url(../img/bg/skeletonmenu-middle.svg);}
+.skeleton-bot {background-image: url(../img/bg/skeletonmenu-bottom.svg);}
+.skeleton:active a, .skeleton:hover a, .skeleton-active a {color: #BB251B;}
+#skeleton-menu {position: absolute; bottom: 30px; list-style-type: none; font-family: Fjalla; font-size: 16px; text-transform: uppercase;}
 #menu-wide {position: fixed; visibility: hidden; opacity: 0; width: 732px; padding-top: 50px; top: 66px; left: 50%; transform: translateX(-50%); font-family: Fjalla; font-size: 16px; text-transform: uppercase; line-height: 28px; text-align: left;}
 #menu-wide>table {padding: 20px 15px; border-collapse: collapse; border: solid rgba(0,0,0,0); border-radius: 16px; border-width: 20px 30px;}
 #menu-wide>table::after {content: " "; position: absolute; top: -40px; left: 50%; margin-left: -10px; border-width: 10px; border-style: solid; border-color: transparent transparent black transparent;}
@@ -28,21 +35,39 @@ a {text-decoration: none;}
 #menu-wide a {color: #fff;}
 #logo {float: left; height: 60px; margin-left: 48px;}
 
-.home-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background: url(../img/bg/parallax/background.png); background-size: cover; overflow: hidden;}
+.home-bg {position: relative; top: 0; left: 0; width: 100%; height: 100vh; background: url(../img/bg/parallax/background.png); background-size: cover; overflow: hidden;}
 .home-content {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 .banner-fade {position: absolute; left: 0; bottom: 0; width: 100%; height: 40vh; background-image: linear-gradient(transparent, #111);}
 .banner-text {position: absolute; left: 15px; top: 50%; transform: translateY(-50%);}
 .banner-title {font-family: Lordish; font-size: 120px; color: #BB251B;}
 .banner-description {font-family: Fjalla; font-size: 16px; color: #fff; text-transform: uppercase;}
+.section, .section-top {position: relative; top: 0; left: 0; width: 100%;}
+.section-top {overflow: auto;}
+.section-title {float: left; font-family: Fjalla; font-size: 36px; text-transform: uppercase; color: #BB251B;}
+.section-top>.button {float: right;}
 
-.button {display: inline-block; margin-left: 15px; font-family: Fjalla; line-height: 36px;}
+.gallery-controls-previous, .gallery-controls-next {width: 36px; height: 36px; border-radius: 18px; background: #BB251B;}
+.carousel-card-title {position: relative; top: -100px; left: 0; width: 300px; margin: auto;}
+.card-title {visibility: hidden; opacity: 0; position: absolute; top: 0; left: 0; width: 100%; text-align: center; font-family: Lordish; font-size: 64px; color: white; transition: .35s;}
+.card-1, .card-2 {left: -80px; transform: scale(.6, .6);}
+.card-4, .card-5 {left: 80px; transform: scale(.6, .6);}
+.card-3 {visibility: visible; opacity: 1;}
+
+.button {display: inline-block; margin-left: 15px; font-family: Fjalla; line-height: 42px; text-transform: uppercase;}
 .button-solid {background: #000; padding: 0 15px; color: #eee; border-bottom: 1px solid #BB251B;}
+.button-solid:hover {background: #BB251B;}
+.button-solid:active {background: #932018; border-color: #fff;}
 .button-transparent {background: none; padding: 0; color: #eee; border-color: rgba(0,0,0,0);}
 
 .icon-dark-small {background: url(../img/icons/Icons-dark-small.png); width: 22px; height: 22px;}
 .icon-dark {background: url(../img/icons/Icons-dark.png); width: 34px; height: 34px;}
 .icon-search-small {background-position: 88px 154px;}
 .icon-menu-middle {background-position: 34px 136px;}
+
+@media screen and (max-width: 1024px) {
+    .container {width: 100%;}
+
+}
 
 @font-face {font-family: Fjalla; src: url(../fonts/SVN-FjallaOne.otf); font-weight: normal;}
 @font-face {font-family: Lordish; src: url(../fonts/iCielLordish.otf); font-weight: normal;}
