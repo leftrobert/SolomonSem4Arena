@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script src="js/jquery-3.6.0.min.js"></script>-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {font-family: Arial;}
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        body{
+            background: url("images/trangchu.png");
+        }
+        /*.pwd {*/
+        /*    display: inline-block;*/
+        /*}*/
+        .form-control, .input-group-addon {
+            height: 48px;
+            background: rgba(0, 0, 0, 0.05);
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 14px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid white;
+            padding-left: 30px;
+            padding-right: 0;
+            letter-spacing: 1px;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn {
+            border-bottom: 1px solid red;
+            background: black;
+            color: white;
+            float: right;
+        }
+        .btn1 {
+            /*border-bottom: 1px solid red;*/
+            background: black;
+            color: white;
+            float: right;
+        }
+        .checkbox{
+            float: left;
+        }
+        #fb, #fb1 {
+            background-color: #1c55a0;
+            width: 120px;
+            border-radius: 12px;
+
+        }
+        #show{
+            color: red;
+        }
+    </style>
+
+    /*script hoi tuoi*/
+    <script>
+        $(document).ready(function(){
+            $( "#date1" ).change(function() {
+                if($("#date1").val()!= null){
+                    var today = new Date();
+                    var birthDate = new Date($("#date1").val());
+                    var age = today.getFullYear() - birthDate.getFullYear();
+                    var m = today.getMonth() - birthDate.getMonth();
+                    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                        age--;
+                    }
+                    if(age < 18){
+                        $( "#show" ).text("MÀY TUỔI GÌ XEM WEB BỌN TAO");
+                    }else{
+                        $( "#show" ).text("");
+                    }
+                }
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">ĐĂNG NHẬP</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">ĐĂNG KÝ</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <form action="#">
+        <input type="text" class="form-control" id="user" placeholder="Tài khoản">
+        <div class="inner-addon left-addon">
+            <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu">
+            <!--            <i class=" glyphicon glyphicon-eye-close"></i>-->
+        </div>
+        <br>
+        <div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">NHỚ MẬT KHÂU</label>
+            </div>
+            <button type="button" class="btn">ĐĂNG NHẬP</button>
+        </div>
+        <br>
+        <br>
+        <div style="color: red">QUÊN MẬT KHẨU?</div>
+        <hr>
+        <div>HOẶC ĐĂNG NHẬP BẰNG MẠNG XÃ HỘI</div>
+        <div id="fb1">
+            <img src="images/logofb.svg" height="25">
+            ĐĂNG NHẬP
+        </div>
+
+    </form>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <form action="#">
+        <input type="text" class="form-control" id="name" placeholder="HỌ VÀ TÊN ">
+        <input type="email" class="form-control" id="mail" placeholder="EMAIL CỦA BẠN ">
+        <input type="date" class="form-control" id="date1" placeholder="NGÀY SINH CỦA BẠN">
+        <p id="show" />
+        <br>
+        <div class="input-group">
+            <input type="password" class="form-control" id="pwd1" placeholder="MẬT KHẨU">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close
+"></i></span>
+        </div>
+        <div class="input-group">
+            <input type="password" class="form-control" id="pwd2" placeholder="NHẬP LẠI MẬT KHẨU">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close
+"></i></span>
+        </div>
+        <div style="color: red">QUY ĐỊNH VÀ CÁC ĐIỀU KHOẢN</div>
+        <br>
+        <div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">TÔI ĐÃ HIỂU VÀ ĐỒNG Ý</label>
+            </div>
+            <button type="button" class="btn1">ĐĂNG KÝ</button>
+        </div>
+        <hr>
+        <div>HOẶC ĐĂNG NHẬP BẰNG MẠNG XÃ HỘI</div>
+        <div id="fb">
+            <img src="images/logofb.svg" height="25">
+            ĐĂNG NHẬP
+        </div>
+    </form>
+</div>
+
+<!--script tabs-->
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

@@ -82,40 +82,55 @@
                 </div>
             </div>
             <ul id="skeleton-menu">
-                <li class="skeleton skeleton-top skeleton-active"><a href="">Trang chủ</a></li>
-                <li class="skeleton skeleton-mid"><a href="">Truyện tranh</a></li>
-                <li class="skeleton skeleton-mid"><a href="">Phim</a></li>
-                <li class="skeleton skeleton-mid"><a href="">Blog</a></li>
-                <li class="skeleton skeleton-bot"><a href="">Giới thiệu</a></li>
+                <li class="skeleton skeleton-top skeleton-active"><a href="home.html">Trang chủ</a></li>
+                <li class="skeleton skeleton-mid"><a href="comics.html">Truyện tranh</a></li>
+                <li class="skeleton skeleton-mid"><a href="movies.htm">Phim</a></li>
+                <li class="skeleton skeleton-mid"><a href="blogs.html">Blog</a></li>
+                <li class="skeleton skeleton-bot"><a href="about.html">Giới thiệu</a></li>
             </ul>
         </div>
     </div>
     <br>
-    <div class="container">
-        <div class="section">
-            <div class="section-top">
-                <span class="section-title">Top comics tuần qua</span>
-                <a href="comics.html" class="button button-solid">Tất cả comics</a>
+    <div class="section-1-2">
+        <div class="container">
+            <div class="section">
+                <div class="section-top">
+                    <span class="section-title">Top comics tuần qua</span>
+                    <a href="comics.html" class="button button-solid">Tất cả comics</a>
+                </div>
+                <div class="gallery">
+                    <div class="gallery-container">
+                        <img src="img/bg/carousel/comic-card-1.jpg" class="gallery-item gallery-item-1" data-index="1">
+                        <img src="img/bg/carousel/comic-card-2.jpg" class="gallery-item gallery-item-2" data-index="2">
+                        <img src="img/bg/carousel/comic-card-3.jpg" class="gallery-item gallery-item-3" data-index="3">
+                        <img src="img/bg/carousel/comic-card-4.jpg" class="gallery-item gallery-item-4" data-index="4">
+                        <img src="img/bg/carousel/comic-card-5.jpg" class="gallery-item gallery-item-5" data-index="5">
+                    </div>
+                    <div class="gallery-controls"></div>
+                    <div class="carousel-card-title">
+                        <a href="comic-detail.html" class="card-title card-1">Tomie</a>
+                        <a href="comic-detail.html" class="card-title card-2">Pumpkin Night</a>
+                        <a href="comic-detail.html" class="card-title card-3">Red Mother</a>
+                        <a href="comic-detail.html" class="card-title card-4">Uzumaki</a>
+                        <a href="comic-detail.html" class="card-title card-5">Death Note</a>
+                    </div>
+                </div>
             </div>
-            <div class="gallery">
-                <div class="gallery-container">
-                    <img src="img/bg/carousel/comic-carousel-1.jpg" alt="Phim 1" class="gallery-item gallery-item-1" data-index="1">
-                    <img src="img/bg/carousel/comic-carousel-2.jpg" alt="Phim 2" class="gallery-item gallery-item-2" data-index="2">
-                    <img src="img/bg/carousel/comic-carousel-3.jpg" alt="Phim 3" class="gallery-item gallery-item-3" data-index="3">
-                    <img src="img/bg/carousel/comic-carousel-4.jpg" alt="Phim 4" class="gallery-item gallery-item-4" data-index="4">
-                    <img src="img/bg/carousel/comic-carousel-5.jpg" alt="Phim 5" class="gallery-item gallery-item-5" data-index="5">
-                </div>
-                <div class="gallery-controls"></div>
-                <div class="carousel-card-title">
-                    <span class="card-title card-1">Núi lửa</span>
-                    <span class="card-title card-2">Núi</span>
-                    <span class="card-title card-3">Biển</span>
-                    <span class="card-title card-4">Phố</span>
-                    <span class="card-title card-5">Đêm</span>
-                </div>
+            <div class="section">
+                <div class="section-top">
+                    <span class="section-title">Phim đề xuất</span>
+                    <a href="comics.html" class="button button-solid">Tất cả phim</a>
+<!--                </div>-->
+<!--                <div class="section-mid">-->
+<!--                    <div class="section-col" id="featured-movie"></div>-->
+<!--                    <div class="section-col section-col-right">-->
+<!--                        <span class="featured-title">Pet Sematary</span>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
+
     <script>
         // Hình nền chuyển động
         var scene = document.getElementById('scene');
