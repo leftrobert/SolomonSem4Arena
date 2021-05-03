@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tài khoản</title>
+    <link rel="icon" href="img/bg/favicon.png" type="image/favicon">
+    <link rel="stylesheet" href="css/noscroll.css">
+    <script src="js/solomon.js"></script>
+</head>
+<body>
+    <img src="img/bg/logo-skull.png" id="logo">
+    <p class="title-welcome title-cement" align="center">Tài khoản</p>
+
+    <div class="panel-container material">
+        <div class="panel-tabs">
+            <button class="panel-tab panel-tab-left" onclick="tabSwitch(event, 'signin')" id="defaultOpen">ĐĂNG NHẬP</button>
+            <button class="panel-tab panel-tab-right" onclick="tabSwitch(event, 'signup')">ĐĂNG KÝ</button>
+        </div>
+        <div id="signin" class="panel-tab-content">
+            <form action="home.html">
+                <div class="input-box">
+                    <label for="user" id="l-user">Tài khoản</label>
+                    <input type="text" id="user" name="user" onfocus="labelMove('user')" onblur="labelMove('user')">
+                </div>
+                <div class="input-box" style="margin-bottom: 30px;">
+                    <label for="password" id="l-password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" onfocus="labelMove('password')" onblur="labelMove('password')">
+                    <span class="password-readability icon-dark-small icon-show-small" onclick="passwordReadability(this, 'password')"></span>
+                </div>
+                <label class="checkbox-container">Nhớ mật khẩu
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <button class="panel-submit button button-solid">ĐĂNG NHẬP</button>
+                <p align="center"><a href="" class="panel-link panel-text">Quên mật khẩu?</a></p>
+                <hr>
+                <p align="center" class="panel-text">Hoặc đăng nhập bằng mạng xã hội</p>
+                <a href="" class="panel-social-button">Đăng nhập</a>
+            </form>
+        </div>
+        <div id="signup" class="panel-tab-content">
+            <form action="home.html">
+                <div class="input-box">
+                    <label for="name" id="l-name">Họ và tên</label>
+                    <input type="text" id="name" name="name" onfocus="labelMove('name')" onblur="labelMove('name')">
+                </div>
+                <div class="input-box">
+                    <label for="user" id="l-mailadd">Địa chỉ E-mail</label>
+                    <input type="email" id="mailadd" name="mailadd" onfocus="labelMove('mailadd')" onblur="labelMove('mailadd')">
+                </div>
+                <div class="input-box">
+                    <label for="birth" id="l-birth">Ngày sinh</label>
+                    <input type="text" id="birth" name="birth" onfocus="this.type='date'; labelMove('birth');">
+                </div>
+                <div class="input-box">
+                    <label for="newpassword" id="l-newpassword">Mật khẩu</label>
+                    <input type="password" id="newpassword" name="newpassword" onfocus="labelMove('newpassword')" onblur="labelMove('newpassword')">
+                    <span class="password-readability icon-dark-small icon-show-small" onclick="passwordReadability(this, 'newpassword')"></span>
+                </div>
+                <div class="input-box" style="margin-bottom: 30px;">
+                    <label for="repassword" id="l-repassword">Mật khẩu</label>
+                    <input type="password" id="repassword" name="repassword" onfocus="labelMove('repassword')" onblur="labelMove('repassword')">
+                    <span class="password-readability icon-dark-small icon-show-small" onclick="passwordReadability(this, 'repassword')"></span>
+                </div>
+                <p align="center"><a href="" class="panel-link panel-text">Quy định & Điều khoản</a></p>
+                <label class="checkbox-container">Đã hiểu và đồng ý
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <button class="panel-submit button button-solid">ĐĂNG KÝ</button>
+                <br><br>
+                <hr>
+                <p align="center" class="panel-text">Hoặc đăng ký bằng mạng xã hội</p>
+                <a href="" class="panel-social-button">Đăng ký</a>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <span class="copyright">Copyright Solomon © 2021</span>
+        <div class="social-links">
+            <a href="https://twitter.com/" class="social-link"><img src="img/icons/social-twitter.svg"></a>
+            <a href="https://instagram.com/" class="social-link"><img src="img/icons/social-instagram.svg"></a>
+            <a href="https://fb.com/" class="social-link"><img src="img/icons/social-facebook.svg"></a>
+        </div>
+    </div>
+
+<script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

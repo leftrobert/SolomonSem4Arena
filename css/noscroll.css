@@ -1,0 +1,68 @@
+::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar:horizontal {height: 8px;}
+::-webkit-scrollbar-thumb {background: #BB251B;}
+::-webkit-scrollbar-track {background: transparent;}
+::-webkit-scrollbar-thumb:window-inactive {background: #932018;}
+::-webkit-input-placeholder, :-ms-input-placeholder, ::placeholder {color: #fff;}
+
+body {margin: 0; font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; background: #000 url(../img/bg/welcome2.jpg) fixed center bottom no-repeat; background-size: contain; overflow: hidden;}
+a {text-decoration: none;}
+hr {margin: 0 40px; border: none; border-top: 1px solid rgba(136,136,136,.6);}
+
+.material {background: rgba(0,0,0,.6); box-shadow: 0 8px 40px rgba(0,0,0,.4); backdrop-filter: blur(40px) saturate(150%); -webkit-backdrop-filter: blur(40px) saturate(150%);}
+.panel-container {position: absolute; top: 240px; width: 360px; left: 50%; transform: translateX(-50%); border-radius: 16px; border: 1px solid rgba(136,136,136,.4);}
+.panel-tabs {width: 100%;}
+.panel-tab {float: left; width: 50%; font-family: Fjalla, sans-serif; color: #888; font-size: 24px; line-height: 60px; text-transform: uppercase; background: none; border: none;}
+.panel-tab-left {border-top-left-radius: 16px;}
+.panel-tab-right {border-top-right-radius: 16px;}
+.panel-tab-content {padding: 40px; margin-top: 60px; max-height: 400px; overflow-y: scroll;}
+.input-box {position: relative; padding: 0 10px; margin-bottom: 40px; border-bottom: 1px solid #fff; height: 32px;}
+.input-box input {position: relative; width: 100%; line-height: 32px;}
+.input-box label {position: absolute; left: 12px; top: 6px; font-family: Fjalla, sans-serif; font-size: 16px; color: #666; text-transform: uppercase; transition: .2s;}
+.label-up {font-size: 12px !important; color: #fff !important; left: 0 !important; top: -18px !important;}
+.password-readability {position: absolute; right: 10px; top: 7px;}
+.checkbox-container {position: relative; padding-left: 24px; font-family: Fjalla, sans-serif; color: #fff; font-size: 16px; text-transform: uppercase; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: default; line-height: 42px;}
+.checkbox-container input[type=checkbox] {position: absolute; opacity: 0; width: 0; height: 0;}
+.checkmark {position: absolute; top: 0; left: 0; width: 15px; height: 15px; background: none; border: 2px solid #fff;}
+.checkbox-container:hover input[type=checkbox] ~ .checkmark {border-color: #ddd;}
+.checkbox-container input[type=checkbox]:checked ~ .checkmark {border-color: #BB251B; background: #BB251B;}
+.checkmark:after {content: ""; position: absolute; display: none;}
+.checkbox-container input[type=checkbox]:checked ~ .checkmark:after {display: block}
+.checkbox-container .checkmark:after {left: 3px; top: -2px; width: 5px; height: 10px; border: solid #fff; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
+input[type=text], input[type=password], input[type=email], input[type=date] {outline: none; border: none; background: none; font-family: Fjalla, sans-serif; font-size: 16px; color: white;}
+input[type=date]::-webkit-calendar-picker-indicator {display: block; background: url(../img/icons/calendar.svg) center no-repeat; background-size: contain; width: 18px; height: 18px;}
+.panel-submit {float: right; border: none;}
+.panel-text {font-family: Fjalla, sans-serif; font-size: 16px; color: #fff; text-transform: uppercase; margin-bottom: 20px;}
+.panel-link {color: #BB251B;}
+.panel-social-button {position: relative; display: inline-block; left: 50%; transform: translateX(-50%); background: #1c55a0 url(../img/icons/social-facebook.svg) left center no-repeat; background-size: 36px 36px; border-radius: 18px; font-family: Fjalla, sans-serif; font-size: 16px; color: #fff; text-transform: uppercase; line-height: 36px; padding: 0 12px 0 48px;}
+.tab-active {background: linear-gradient(180deg, rgba(187, 37, 27, 0.25) 0%, rgba(121, 20, 14, 0) 100%); color: #fff;}
+#logo {position: absolute; height: 72px; left: 48px; top: 30px;}
+.title-welcome {position: absolute; top: 66px; font-family: Lordish, serif; font-size: 96px; width: 100%; margin: 0;}
+.title-cement {background-image: url(../img/bg/texture-cement.jpg); background-size: cover; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+
+.footer {position: fixed; bottom: 0; left: 0; background: #000; border-top: 2px solid #932018; font-family: Fjalla, sans-serif; font-size: 16px; color: #fff; text-transform: uppercase; line-height: 36px; width: 100%;}
+.copyright {float: left; margin-left: 48px;}
+.social-links {float: right; margin-right: 48px;}
+.social-link {float: right; margin: 2px 0 0 16px;}
+.social-link>img {width: 20px; height: 20px;}
+
+.button {display: inline-block; margin-left: 15px; font-family: Fjalla, sans-serif; line-height: 42px; text-transform: uppercase;}
+.button-solid {background: #000; padding: 0 15px; color: #eee; border-bottom: 1px solid #BB251B;}
+.button-solid:hover {background: #BB251B;}
+.button-solid:active {background: #932018; border-color: #fff;}
+.button-transparent {background: none; padding: 0; color: #eee; border-color: rgba(0,0,0,0);}
+
+.icon-dark-small {background: url(../img/icons/Icons-dark-small.png); width: 22px; height: 22px;}
+.icon-dark {background: url(../img/icons/Icons-dark.png); width: 34px; height: 34px;}
+.icon-search-small {background-position: 88px 154px;}
+.icon-show-small {background-position: 110px 22px;}
+.icon-hide-small {background-position: 88px 22px;}
+.icon-menu-middle {background-position: 34px 136px;}
+
+@media screen and (max-width: 1440px) {
+    .container {width: 100%;}
+}
+
+@font-face {font-family: Fjalla; src: url(../fonts/SVN-FjallaOne.otf); font-weight: normal;}
+@font-face {font-family: Lordish; src: url(../fonts/iCielLordish.otf); font-weight: normal;}
