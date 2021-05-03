@@ -21,14 +21,16 @@
 
 .gallery-item-1 {
   left: 20%;
-  opacity: 0.4;
+  opacity: 1;
+  filter: brightness(0.4);
   transform: translateX(-50%);
 }
 
 .gallery-item-2,
 .gallery-item-4 {
   height: 350px;
-  opacity: 0.8;
+  opacity: 1;
+  filter: brightness(0.8);
   width: 240px;
   z-index: 1;
 }
@@ -55,7 +57,8 @@
 
 .gallery-item-5 {
   left: 80%;
-  opacity: 0.4;
+  opacity: 1;
+  filter: brightness(0.4);
   transform: translateX(-50%);
 }
 
