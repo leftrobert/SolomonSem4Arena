@@ -57,7 +57,7 @@ input[type=date]::-webkit-calendar-picker-indicator {display: block; background:
 .social-link {float: right; margin: 2px 0 0 16px;}
 .social-link>img {width: 20px; height: 20px;}
 
-.splash {position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; background: #000 url(../img/bg/splash-bg.png) center fixed no-repeat; background-size: cover; transition: 2.5s;}
+.splash {position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; background: #000 url(../img/bg/splash-bg.jpg) center fixed no-repeat; background-size: cover; transition: 2.5s;}
 .splash>img {position: absolute; transition: 2s;}
 .splash-shown {opacity: 1;}
 .splash-shown>img {width: 262px; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 1;}
