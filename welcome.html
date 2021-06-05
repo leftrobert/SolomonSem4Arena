@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Solomon</title>
+    <link rel="icon" href="img/bg/favicon.png" type="image/favicon">
+    <link rel="stylesheet" href="css/noscroll.css">
+    <script src="js/solomon.js"></script>
+</head>
+<body>
+    <img src="img/bg/logo-skull.png" id="logo">
+    <p class="title-welcome title-cement" align="center" style="top:0">Welcome</p>
+    <div class="welcome-container">
+        <p class="sans-dark" align="center">Các bạn sắp tiếp cận nội dung bạo lực và kinh dị<br>Hãy đảm bảo bạn đủ 18 tuổi trở lên bằng cách nhập ngày sinh bên dưới</p><br><br>
+        <table class="date-input-container">
+            <tr>
+                <th>
+                    <label for="dd" class="sans-dark">Ngày</label>
+                </th>
+                <th></th>
+                <th>
+                    <label for="mm" class="sans-dark">Tháng</label>
+                </th>
+                <th></th>
+                <th>
+                    <label for="yyyy" class="sans-dark">Năm</label>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input id="dd" type="number" min="1" max="31" class="date-input" placeholder="dd" oninput="checkBlank()">
+                </td>
+                <td><img src="img/bg/welcome-date-separator.png"></td>
+                <td>
+                    <input id="mm" type="number" min="1" max="12" class="date-input" placeholder="mm" oninput="checkBlank()">
+                </td>
+                <td><img src="img/bg/welcome-date-separator.png"></td>
+                <td>
+                    <input id="yyyy" type="number" min="1900" max="2050" class="date-input" placeholder="yyyy" oninput="checkBlank()">
+                </td>
+            </tr>
+        </table>
+        <br><br><p class="sans-dark" align="center">Chúng tôi sẽ không chịu trách nhiệm về tổn thất tinh thần của bạn<br>sau khi bạn nhấn xác nhận</p><br>
+        <p style="cursor: default" align="center">
+            <span id="ageSubmit" class="button button-disabled">ĐỒNG Ý VÀ XÁC NHẬN</span>
+        </p>
+    </div>
+
+    <div class="footer">
+        <span class="copyright">Copyright Solomon © 2021</span>
+        <div class="social-links">
+            <a href="https://twitter.com/" class="social-link"><img src="img/icons/social-twitter.svg"></a>
+            <a href="https://instagram.com/" class="social-link"><img src="img/icons/social-instagram.svg"></a>
+            <a href="https://fb.com/" class="social-link"><img src="img/icons/social-facebook.svg"></a>
+        </div>
+    </div>
+
+    <div class="splash splash-shown">
+        <img src="img/bg/logo-full.png" onclick="splashFadeout()">
+    </div>
+</body>
+</html>

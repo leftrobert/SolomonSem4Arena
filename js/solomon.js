@@ -19,7 +19,7 @@ function navTransform() {
 }
 
 function tabSwitch(evt, tabId) {
-    var i, tabcontent, tablinks;
+    let i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("panel-tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -39,7 +39,7 @@ function labelMove(inputId) {
     if (elm.classList.contains("label-up")) {
         if (ipt.value === "") elm.classList.remove("label-up");
     }
-    else elm.classList.add("label-up")
+    else elm.classList.add("label-up");
     if (inputId==="birth") ipt.removeAttribute("onfocus");
 }
 
@@ -55,4 +55,54 @@ function passwordReadability(elm, pwdid) {
         elm.classList.remove("icon-hide-small");
         elm.classList.add("icon-show-small");
     }
+}
+
+function checkBlank() {
+    let dd = document.getElementById("dd").value;
+    let mm = document.getElementById("mm").value;
+    let yyyy = document.getElementById("yyyy").value;
+    let btn = document.getElementById("ageSubmit");
+    if (dd!="" && mm!="" && yyyy!="") {
+        if (btn.classList.contains("button-disabled")) {
+            btn.classList.remove("button-disabled");
+            btn.classList.add("button-solid");
+            btn.setAttribute("onclick", "ageConfirmation()");
+        }
+    }
+    else {
+        if (btn.classList.contains("button-solid")) {
+            btn.classList.remove("button-solid");
+            btn.classList.add("button-disabled");
+            btn.removeAttribute("onclick");
+        }
+    }
+}
+
+function ageConfirmed() {
+    window.location.assign("home.html");
+}
+
+function ageConfirmation() {
+    let dd = parseInt(document.getElementById("dd").value);
+    let mm = parseInt(document.getElementById("mm").value);
+    let yyyy = parseInt(document.getElementById("yyyy").value);
+    let today = new Date();
+    if (today.getFullYear()-yyyy>18) {ageConfirmed();}
+    else if (today.getFullYear()-yyyy==18) {
+        if (today.getMonth()-mm>0) {ageConfirmed();}
+        else if (today.getMonth()-mm==0) {
+            if (today.getDay()-dd>=0) {ageConfirmed();}
+            else alert("Bạn tuổi gì xem được web chúng tôi?");
+        }
+        else alert("Bạn tuổi gì xem được web chúng tôi?");
+    }
+    else alert("Bạn tuổi gì xem được web chúng tôi?");
+}
+
+function splashFadeout() {
+    let spl = document.getElementsByClassName("splash")[0];
+    spl.classList.replace("splash-shown", "splash-fadeout");
+    setTimeout(function () {
+        document.body.removeChild(spl);
+    }, 2500);
 }

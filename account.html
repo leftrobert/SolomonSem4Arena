@@ -20,7 +20,7 @@
             <button class="panel-tab panel-tab-right" onclick="tabSwitch(event, 'signup')">ĐĂNG KÝ</button>
         </div>
         <div id="signin" class="panel-tab-content">
-            <form action="home.html">
+            <form action="home.html" method="post">
                 <div class="input-box">
                     <label for="user" id="l-user">Tài khoản</label>
                     <input type="text" id="user" name="user" onfocus="labelMove('user')" onblur="labelMove('user')">
@@ -42,7 +42,7 @@
             </form>
         </div>
         <div id="signup" class="panel-tab-content">
-            <form action="home.html">
+            <form action="home.html" method="post">
                 <div class="input-box">
                     <label for="name" id="l-name">Họ và tên</label>
                     <input type="text" id="name" name="name" onfocus="labelMove('name')" onblur="labelMove('name')">
